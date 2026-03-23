@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.MainPage">
+    <StackLayout Padding="20"
+                VerticalOptions="StartAndExpand"
+                MaximumWidthRequest="500"
+                MinimumWidthRequest="500"
+               >
+        <Frame Padding="20" 
+               CornerRadius="20"
+               BackgroundColor="DarkSlateGrey"
+              >
+            <StackLayout>
+                <Label Text="Login"
+                       FontSize="45"
+                       HorizontalTextAlignment="Center"/>
+
+                <StackLayout Padding="30"/>
+
+                <Label Text="Usuario"/>
+                <Entry Placeholder="Usuario"
+                       x:Name="txtUsuario"
+                       BackgroundColor="white"
+                       TextColor="Black"/>
+                
+                <StackLayout Padding="30"/>
+
+                <Label Text="Senha:"/>
+                <Entry Placeholder="Senha"
+                       x:Name="txtSenha"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       IsPassword="True"/>
+                
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="ckbMostrarSenha"
+                              CheckedChanged="ckbMostrarSenha_Check"/>
+                    <Label Text="Mostrar senha"
+                           VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="lblMostrarSenha_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                
+                <StackLayout Padding="15"/>
+                <Button Text="Entrar" 
+                        FontSize="15"
+                        TextColor="White" 
+                        Clicked="btnEntrar_Clicked"
+                />
+                <StackLayout Padding="10" />
+                <Button Text="Cadastrar-se"
+                        FontSize="15"
+                        TextColor="White"
+                        Clicked="btnCadastrar_Clicked"/>
+            </StackLayout>
+        </Frame>
+
+
+    </StackLayout>
+
+
+</ContentPage>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.pgCadastroUsuario"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Cadastro de Usuario"
+             >
+    <StackLayout 
+        Padding="20"
+        VerticalOptions="StartAndExpand"
+        MaximumWidthRequest="500"
+        MinimumWidthRequest="500"
+        >
+        <Frame Padding="20" 
+                CornerRadius="20"
+                BackgroundColor="DarkSlateGrey"
+                MinimumHeightRequest="500"
+                MaximumHeightRequest="750"
+               >
+            <StackLayout>
+                <Label Text="Cadastre-se"   
+                   FontSize="45"
+                   HorizontalTextAlignment="Center"/>
+                <StackLayout Padding="10" />
+
+                <Label Text="Nome"/>
+                <Entry x:Name="txtNome"/>
+                <StackLayout Padding="10" />
+
+                <Label Text="Login"/>
+                <Entry x:Name="txtLogin"/>
+                <StackLayout Padding="10" />
+
+                <Label Text="Senha"/>
+                <Entry x:Name="txtSenha"/>
+                <StackLayout Padding="10" />
+
+                <Label Text="Email"/>
+                <Entry x:Name="txtEmail" 
+                   Placeholder="Email@gmail.com"/>
+                <StackLayout Padding="10" />
+
+                <Label Text="Data de nascimento"/>
+                <Entry x:Name="DataNascimento" Placeholder="XX/XX/XXXX">
+                    <Entry.Behaviors>
+                        <toolkit:MaskedBehavior Mask = "XX/XX/XXXX"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <StackLayout Padding="10" />
+
+                <Button 
+                    Text="Cadastrar"
+                    TextColor="White"
+                    Clicked="btnCadastrar"
+                    />
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>

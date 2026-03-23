@@ -1,0 +1,4 @@
+FROM nginx 
+COPY index.html /usr/share/nginx/html
+expose 80
+entrypoint ["nginx", "-g", "daemon off;"]

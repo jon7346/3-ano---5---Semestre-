@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.pgPrincipal"
+             Title="pgPrincipal">
+    <StackLayout
+         Padding="20"
+            VerticalOptions="StartAndExpand"
+            MaximumWidthRequest="500"
+            MinimumWidthRequest="500">
+        <Frame  
+            Padding="20" 
+            CornerRadius="20"
+            BackgroundColor="DarkSlateGrey"
+            MinimumHeightRequest="500">
+            <StackLayout>
+                <Button Text="Voltar"
+                        Clicked="btnVoltar_Clicked"/>
+                    <StackLayout Padding ="10"/>
+                <Label x:Name="lblUsuario"/>
+                    <StackLayout Padding="10"/>
+                
+                <Label x:Name="lblLogin"/>
+                    <StackLayout Padding="10"/>
+                
+                <Label x:Name="lblDataNascimento"/>
+                    <StackLayout Padding="10"/>
+                
+                <Label x:Name="lblSenha"/>
+                    <StackLayout Padding="10"/>
+                
+                <Label x:Name="lblEmail"/>
+                    <StackLayout Padding="10">
+
+
+                </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

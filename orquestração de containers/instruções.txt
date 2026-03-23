@@ -1,0 +1,5 @@
+docker build -t jonathan_feliciano_felipe .
+
+docker run -d --name "jonatha_feliciano_felipe" -p 8082:80 id_da_imagem
+
+acesse o localhost 8082
