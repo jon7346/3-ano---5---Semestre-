@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="treino_MAUI.MainPage">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+        
+            <Label Text="Jogo: Cara ou coroa "
+                HorizontalOptions="Center"
+                Padding="20"
+                FontSize="26"
+                FontFamily="Arial Black"/>
+
+            <Label Text="insira seu nome"/>
+            <StackLayout Padding="5"/>
+            <Entry x:Name="NomeUsuario" MaximumWidthRequest="400"/>
+
+
+            <Label Text="Aposte e descubra logo abaixo:"/>
+            <StackLayout Padding="5"/>
+            <Label x:Name="Sorteio" HorizontalOptions="Center"  Padding="20"/>
+
+            <Label Text="Resultado: "/>
+            <StackLayout Padding="5"/>
+            <Label x:Name ="txtResultado" Padding="20"/>
+
+         
+
+            <Picker Title="Aposte !!"
+                MaximumWidthRequest="300"
+                x:Name="Escolha"
+                >
+                <Picker.Items>
+                    <x:String>Cara</x:String>
+                    <x:String>Coroa</x:String>
+                </Picker.Items>
+            </Picker>
+            <StackLayout Padding="20"/>
+
+            <Button x:Name="Girar"
+                    Text="Girar"
+                    Clicked="btnGirarClicked"
+                    MaximumWidthRequest="100"  />
+
+            <StackLayout Padding="20"/>
+
+            <Button x:Name="Reiniciar"
+                Text="Reiniciar"
+                MaximumWidthRequest="100" 
+                Clicked="btnReiniciarClicked"/>
+
+
+        <ListView x:Name="Histórico">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <Frame CornerRadius="10"
+                      Padding="10"
+                      Margin="5"
+                      BackgroundColor="#414142">
+                            <StackLayout>
+
+                                <Label Text="{Binding nome}"
+                              FontSize="20"
+                              FontAttributes="Bold"/>
+                                <Label Text="{Binding horario}"/>
+                                <Label Text="{Binding aposta}"/>
+                                <Label Text="{Binding resultado_Moeda}"/>
+                                <Label Text="{Binding resultado_Jogador} "/>
+                                <Label Text="{Binding Pontuação}"/>
+
+
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </ScrollView>
+</ContentPage>
